@@ -8,37 +8,39 @@ If you find any problems, please let me know.
 
 ## What it does?
 
-1.  Find this C symbol:                         ✓
-2.  Find this global definition:                ✓
-3.  Find functions called by this function:     ✓
-4.  Find functions calling this function:       ✓
-5.  Find this text string:                      ✓
-6.  Change this text string:                    ✗
-7.  Find this egrep pattern:                    ✓
-8.  Find this file:                             ✓
-9.  Find files #including this file:            ✓
-10. Find assignments to this symbol:            ✓
+* Find this C symbol:                         ✓
+* Find this global definition:                ✓
+* Find functions called by this function:     ✓
+* Find functions calling this function:       ✓
+* Find this text string:                      ✓
+* Change this text string:                    ✗
+* Find this egrep pattern:                    ✓
+* Find this file:                             ✓
+* Find files #including this file:            ✓
+* Find assignments to this symbol:            ✓
 
 ## Set it up?
 
-This package depends on vim-unite (https://github.com/Shougo/unite.vim)
+This package depends on:
+* vim-unite (https://github.com/Shougo/unite.vim)
+* vim-proc (https://github.com/Shougo/vimproc.vim)
 
-After you've installed vim-unite and all it's dependencies, you can install this package 
+After you've installed the dependencies, you can install this package 
 with your favioure package manager.
 
 Example:
 
-1. With Vundle - 
+* With Vundle - 
 ```
 Plugin 'amitab/vim-unite-cscope'
 ```
 
-2. With Pathogen
+* With Pathogen
 ```
 cd ~/.vim/bundle
 git clone https://github.com/amitab/vim-unite-cscope
 ```
-3. With Neobundle
+* With Neobundle
 ```
 NeoBundle 'Shougo/unite.vim'
 ```
@@ -50,8 +52,17 @@ cscope -q -R -b -i cscope.files
 ```
 And then the package will be able to use the cscope.out file to generate results.
 
+## Usage
+1. In command palette, run:`:Unite cscope/find_this_symbol`
+2. Then a prompt appears asking for an input
+3. Input your query and press enter
+
 ## Screenshots
-![ScreenShot](http://i.imgur.com/iJEkM4k.png)
+Input your search term:
+![ScreenShot](http://i.imgur.com/SZNRrcx.png)
+
+Voila! Results:
+![ScreenShot](http://i.imgur.com/C3MtaSz.png)
 
 ## Further Improvements?
 1. Add 'Change this text string' functionality
